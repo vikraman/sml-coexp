@@ -1,0 +1,11 @@
+Library
+  signature COEXP
+  structure Coexp
+  structure Classical
+  structure Examples
+is
+  $/basis.cm
+  coexp.sig
+  coexp.sml
+  classical.sml
+  examples.sml
