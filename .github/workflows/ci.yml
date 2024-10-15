@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Install SML/NJ
-        run: apt install smlnj
+        run: sudo apt install -y smlnj
 
       - name: Checkout repo
         uses: actions/checkout@v2
