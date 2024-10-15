@@ -1,0 +1,16 @@
+on: [push, pull_request]
+name: ci
+
+jobs:
+  sml:
+    name: sml
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install SML/NJ
+        run: apt install smlnj
+
+      - name: Checkout repo
+        uses: actions/checkout@v2
+
+      - name: Check
+        run: echo 'CM.make "coexp.cm";' | sml
