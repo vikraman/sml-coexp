@@ -23,10 +23,10 @@ struct
         "[" ^ Int.toString h ^ ", " ^ String.concatWith ", " (List.map Int.toString t) ^ "]"
 
     (* naive implementation *)
-    fun mult (l : int list) : int =
+    fun mult0 (l : int list) : int =
         case l of
             [] => 1
-          | h :: t => h ** mult t
+          | h :: t => trace (" at " ^ listToString h t) (h ** mult0 t)
 
     (* first version *)
     fun mult1 (l : int list) : int =
